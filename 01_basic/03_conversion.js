@@ -49,3 +49,40 @@ let obj2 = { key: "value" };
 console.log(obj1 == obj2);  // false (different references)
 console.log(NaN === NaN);  // false
 console.log(typeof "Hello");  // "string"
+console.log("===============check object=================");
+
+let people = [
+    {
+      name: "Alice",
+      age: 30,
+      photos: [
+        { filename: "alice1.jpg", description: "Profile picture" },
+        { filename: "alice2.jpg", description: "Vacation in Paris" },
+        { filename: "alice3.jpg", description: "With friends" }
+      ]
+    },
+    {
+      name: "Bob",
+      age: 25,
+      photos: [
+        { filename: "bob1.jpg", description: "At the beach" },
+        { filename: "bob2.jpg", description: "Family reunion" }
+      ]
+    },
+    {
+      name: "Charlie",
+      age: 35,
+      photos: [
+        { filename: "charlie1.jpg", description: "Hiking trip" },
+        { filename: "charlie2.jpg", description: "Skiing in the Alps" },
+        { filename: "charlie3.jpg", description: "Work conference" }
+      ]
+    }
+  ];
+  for (let index = 0; index < people.length; index++) {
+    console.log(`this is person ${String(index)} ${people[index].name}`);
+    for (let indexTwo = 0; indexTwo < people[index].photos.length; indexTwo++) {
+        console.log(`this is person photo ${String(indexTwo)} ${people[index].photos[indexTwo].filename}`);
+      }
+  }
+  
